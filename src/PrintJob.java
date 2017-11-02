@@ -1,9 +1,9 @@
 
 public class PrintJob implements Comparable<PrintJob> {
 	
-	private String name;
-	private int userPriority;
-	private int pages;
+	protected String name;
+	protected int userPriority;
+	protected int pages;
 	
 	public PrintJob(String n, int pri, int pag)
 	{
