@@ -5,16 +5,25 @@ import java.util.Scanner;
 public class Printer {
 	
 	private static Scanner in;
+	private static BinaryHeap<PrintJob> heap;
 	
 	public static void main(String[] args) throws Exception
 	{
 		System.out.println("Welcome to Bodie's Printer!");
+		
+		heap = new BinaryHeap<PrintJob>();
+		
 		in = new Scanner( new FileReader("input.txt"));
 		
 		
 		while(in.hasNext()) {
 			//add GetNext() to the heap
-			GetNext();
+			heap.insert(GetNext());
+		}
+		
+		while(!heap.isEmpty() )
+		{
+			System.out.println( heap.deleteMin() );;
 		}
 		
 		//while queue.hasNext(), remove and print min.
