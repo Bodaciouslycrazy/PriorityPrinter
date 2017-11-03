@@ -6,10 +6,18 @@ public class Printer {
 	
 	private static Scanner in;
 	
-	public static void main(String[] args) throws FileNotFoundException
+	public static void main(String[] args) throws Exception
 	{
 		System.out.println("Welcome to Bodie's Printer!");
 		in = new Scanner( new FileReader("input.txt"));
+		
+		
+		while(in.hasNext()) {
+			//add GetNext() to the heap
+			GetNext();
+		}
+		
+		//while queue.hasNext(), remove and print min.
 		
 	}
 	

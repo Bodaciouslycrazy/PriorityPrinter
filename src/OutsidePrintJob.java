@@ -13,5 +13,10 @@ public class OutsidePrintJob extends PrintJob {
 	{
 		return (float) (pages * .1);
 	}
+	
+	public String toString()
+	{
+		return super.toString() + "\tCost: " + calculateCost();
+	}
 
 }

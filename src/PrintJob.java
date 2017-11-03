@@ -41,4 +41,10 @@ public class PrintJob implements Comparable<PrintJob> {
 	public int compareTo(PrintJob j) {
 		return calculatePriority() - j.calculatePriority();
 	}
+	
+	public String toString()
+	{
+		//Probably should use string builder here...
+		return "Name: " + name + "\tPriority: " + userPriority + "\tPages: " + pages;
+	}
 }
